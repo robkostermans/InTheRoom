@@ -10,3 +10,26 @@
         color:#333 !important;
     }
 }
+
+nav {
+    position:fixed;
+    z-index:900;
+    padding: 1em;
+    
+    h1, h2, h3 {
+        margin: 0;
+        line-height: 1.5em;
+    }
+
+    h1 {
+        font-weight: lighter;
+        font-size: 2em;
+    }
+
+    h3 {
+        margin-top: 1.5em;
+    }
+    a{
+        display:block;
+    }
+}

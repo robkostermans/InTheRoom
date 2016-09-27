@@ -20,23 +20,7 @@ body {
     }
 }
 
-nav {
-    padding: 1em;
-    
-    h1, h2, h3 {
-        margin: 0;
-        line-height: 1.5em;
-    }
 
-    h1 {
-        font-weight: lighter;
-        font-size: 2em;
-    }
-
-    h3 {
-        margin-top: 1.5em;
-    }
-}
 
 main {
     text-align: left;
@@ -45,16 +29,15 @@ main {
     height: 100vh;
     section {
         position: relative;
-        .floorplan & {
-            top: 50%;
+         top: 50%;
             left: 50%;
             border: 2px solid #fff;
-            margin: -50vmin 0 0 -25vmin;
+            margin: -40vmin 0 0 -25vmin;
             max-width: 50vmin;
             min-height: (50vmin * $scale);
-            transition: all 0.5s cubic-bezier(0.2,1,0.3,1);
-            transform-style: preserve-3d;
-
+            .floorplan & {
+           
+            
             &:after {
                 z-index:100;
                 content: "";
