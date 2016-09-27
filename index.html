@@ -9,8 +9,8 @@
         <nav>
             <h1>In The Room?</h1>
             <h2>Main Building - D-wing room 5.23</h2>
-            <button onClick="document.body.classList.toggle('floorplan');this.classList.toggle('a')">floorplan</button>
-            <button onClick="document.body.classList.toggle('DDD');this.classList.toggle('a')">3d</button>
+            <button onClick="document.body.classList.toggle('floorplan');this.classList.toggle('a')">FLOORPLAN</button>
+            <button onClick="document.body.classList.toggle('DDD');this.classList.toggle('a')">3D</button>
             </div>
             <h3>6 out of 9 desks occupied</h3>
             
@@ -24,16 +24,19 @@
         </nav>
         <main> 
             <section>
-                 <ul class="seats">
-                    <li data-table="1" data-seat="1"><a class="user" data-f="Designer" href="#"><i>Rob</i><img src="data/boy.svg"/></a></li>
-                    <li data-table="1" data-seat="2"><a class="user" data-f="Designer" href="#"><i>Rob</i><img src="data/boy.svg"/></a></li>
-                    <li data-table="1" data-seat="3"><a class="user" data-f="Designer" href="#"><i>Rob</i><img src="data/boy.svg"/></a></li>
-                    <li data-table="1" data-seat="4"><a class="user" data-f="Designer" href="#"><i>Rob</i><img src="data/boy.svg"/></a></li>
-                    <li data-table="1" data-seat="5"><a class="user" data-f="Designer" href="#"><i>Rob</i><img src="data/boy.svg"/></a></li>
-                    <li data-table="2" data-seat="1"><a class="user" data-f="Designer" href="#"><i>Rob</i><img src="data/boy.svg"/></a></li>
-                    <li data-table="2" data-seat="2"><a class="user" data-f="Designer" href="#"><i>Rob</i><img src="data/boy.svg"/></a></li>
-                    <li data-table="2" data-seat="3"><a class="user" data-f="Designer" href="#"><i>Rob</i><img src="data/boy.svg"/></a></li>
-                    <li data-table="2" data-seat="4"><a class="user" data-f="Designer" href="#"><i>Rob</i><img src="data/boy.svg"/></a></li>
+                 <ul class="t-1">
+                    <li><a class="user" data-f="Designer" href="#"><b>Rob Kostermans</b><img data-src="data/boy.svg"/><span>short description</span></a></li>
+                    <li><a class="user" data-f="Designer" href="#"><b>Rob</b><img data-src="data/man-1.svg"/><span>short description</span></a></li>
+                    <li><a class="user" data-f="Designer" href="#"><b>Rob</b><img data-src="data/boy-2.svg"/><span>short description</span></a></li>
+                    <li><a class="user" data-f="Designer" href="#"><b>Rob</b><img data-src="data/girl.svg"/><span>short description</span></a></li>
+                    <li><a class="user" data-f="Designer" href="#"><b>Rob</b><img data-src="data/girl-1.svg"/><span>short description</span></a></li>
+                 </ul>
+
+                 <ul class="t-2">
+                    <li><a class="user" data-f="Designer" href="#"><b>Rob</b><img data-src="data/boy-3.svg"/><span>short description</span></a></li>
+                    <li><a class="user" data-f="Designer" href="#"><b>Rob</b><img data-src="data/boy-4.svg"/><span>short description</span></a></li>
+                    <li><a class="user" data-f="Designer" href="#"><b>Rob</b><img data-src="data/girl-2.svg"/><span>short description</span></a></li>
+                    <li><a class="user" data-f="Designer" href="#"><b>Rob</b><img data-src="data/girl-3.svg"/><span>short description</span></a></li>
                  </ul>
                  <div class="prop door"></div>
                  <div class="prop window e1"></div>
@@ -44,6 +47,6 @@
             </section> 
         </main>
         
-        <script><?php echo file_get_contents("js/itr.js");?></script>
+        <script src="js/itr.min.js"></script>
     </body>
 </html>
