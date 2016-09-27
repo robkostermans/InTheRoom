@@ -11,9 +11,9 @@ body {
     letter-spacing: 0.01em;
     font-weight: 300;
     margin: 0;
-    //background-color:#93b1c5;
-    //background: #208fe5; /* Old browsers */
-    background: radial-gradient(center center, circle cover, #208fe5, #023c8e); //radial-gradient(ellipse at center,  #208fe5 0%,#023c8e 100%);
+    background-color:#93b1c5;
+    background: radial-gradient(center center, circle cover, #208fe5, #023c8e);
+    background: -webkit-radial-gradient(center center, circle cover, #208fe5, #023c8e);
     transform: translateZ(0);
     text-align: center;
 }
@@ -49,7 +49,7 @@ main {
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
-    oveflow:auto;
+    //overflow:auto;
     section {
         position: relative;
         box-sizing: border-box;
