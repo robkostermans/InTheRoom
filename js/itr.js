@@ -1,17 +1,19 @@
-function filter(b,v) {
-    var e, a = document.querySelectorAll("a[data-f='" + v + "']");
-    for (e in a) {
-       if (e == parseInt(e,10)) {
-           a[e].classList.toggle("a");
-        }
+function sf(o){
+    if(o.classList.contains("bf")){
+        //document.body.classList.toggle('fp');
+        document.getElementById("fp").checked = true ;
+        return;
+    }
+    document.body.classList.add('floorplan');
+    document.getElementById("fp").checked = true ;
+    if(o.classList.contains("a") || o.classList.contains("z")){
+        console.log("show details");
+    }else{
+        o.classList.add('z');
     }
 }
 
-function show(c) {
 
-    c.parentNode.classList.toggle("a");
-
-}
 
 (function(){
    var e, a = document.querySelectorAll("img");

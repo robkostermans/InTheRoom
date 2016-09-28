@@ -1,9 +1,14 @@
-﻿$primary-color: #808080;
+﻿$primary-color: #023c8e;
 $secondary-color: #ddd;
 $background-color: #208fe5;
 $scale: 1.5;
 $seat_size: 20%;
 $line-color: #fff;
+
+$pallette-1 : #0f0;
+$pallette-2 : #ff0;
+$pallette-3 : #f00;
+$pallette-4 : #f0f;
 
 body {
     font-family: sans-serif;
@@ -11,7 +16,8 @@ body {
     background-color:#93b1c5;
     background: radial-gradient(center center, circle cover, #208fe5, #023c8e);
     background: -webkit-radial-gradient(center center, circle cover, #208fe5, #023c8e);
-    transform: translateZ(0);
+    margin:0;
+
     *{
         box-sizing:border-box !important;
         transition: all 0.5s cubic-bezier(0.2,1,0.3,1);
@@ -20,45 +26,74 @@ body {
     }
 }
 
-
-
 main {
-    text-align: left;
     position: fixed;
     width: 100vw;
     height: 100vh;
     section {
         position: relative;
-         top: 50%;
-            left: 50%;
-            border: 2px solid #fff;
-            margin: -40vmin 0 0 -25vmin;
-            max-width: 50vmin;
-            min-height: (50vmin * $scale);
-            .floorplan & {
-           
-            
-            &:after {
-                z-index:100;
-                content: "";
-                display: block;
-                width: calc(100% - 20px);
-                height: calc(100% - 20px);
-                position: absolute;
-                top: 0;
-                left: 0;
-                border: 2px solid #fff;
-                margin: 10px;
+        border: 2px solid #fff;
+        margin:5.5em auto;
+        max-width: 50vmin;
+        min-height: (50vmin * $scale);
+        padding:4%;
+        ul{padding:0;margin:0;}
+        header{
+            border:0 !important;
+            position:absolute;
+                top:-5.5em;
+                left:-2px;
+            h1,h2{
+                display:inline-block;
+                background:#fff;
+                color:$primary-color !important;
+                font-size:1.5em;
+                line-height:1.5em;
+                padding:0 0.5em;
+                border:0 !important;
+                margin:0;
+                white-space:nowrap;
+                
             }
+            h2{
+                display:block;
+                    font-size:1.3em;
+                    font-weight:lighter;
+                }
         }
-
-        .floorplan.ddd & {
-            box-shadow: -30px 25px 96px 12px rgba(0,0,0,0.55);
-            transform: rotateX(70deg) rotateZ(-45deg) translateZ(-15vmin);
-        }
+       
     }
 }
 
+//
+//  FLOORPLAN mode
+//
+
+#fp:checked ~ section {
+    &:after {
+        z-index:100;
+        content: "";
+        display: block;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 2px solid #fff;
+        margin: 10px;
+    }
+}
+
+
+//#vw:checked ~ section{
+//    box-shadow: -30px 25px 96px 12px rgba(0,0,0,0.55);
+//    transform: rotateX(70deg) rotateZ(-45deg) translateZ(-15vmin);
+//}
+    
+
+@import "components/props";
 @import "components/user";
 @import "components/navigation";
-@import "components/props";
+@import "components/mobile";
+
+

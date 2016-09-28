@@ -1,0 +1,22 @@
+//
+//  SIMPLE mobile strategy
+//  
+@media screen and (max-width : 768px){
+    main{
+          overflow:auto !important;
+    }
+    section{
+        max-width:90vmin !important;
+        min-height: (90vmin * $scale) !important;
+        header{
+            width:100vw;
+            left:-5vmin !important;
+            h1{display:block !important;}
+        }
+    }
+    
+    
+    input[type=checkbox]{
+        display:none;
+     }
+}

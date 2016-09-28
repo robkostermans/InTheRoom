@@ -5,45 +5,36 @@
     <link rel="stylesheet" type="text/css" href="css/itr.css">
 </head>
     <body class="list">
-       
-        <nav>
-            <h1>In The Room?</h1>
-            <h2>Main Building - D-wing room 5.23</h2>
-            <button onClick="document.body.classList.toggle('floorplan');this.classList.toggle('a')">FLOORPLAN</button>
-            <button onClick="document.body.classList.toggle('DDD');this.classList.toggle('a')">3D</button>
-            </div>
-            <h3>6 out of 9 desks occupied</h3>
+        <main>
+            <input id="fp" type="checkbox" value="Floorplan"/>
             
-           
-
-            <div>
-            <a href="#vd" data-o="true" onClick="filter(this,'Tester')">Tester</a>
-            <a href="#ux" data-o=true onClick="filter(this,'Designer')">UX Designer</a>
-            <a href="#dv" data-o=true onClick="filter(this,'Developer')">Developer</a>
-            <a href="#dv" data-o=true onClick="filter(this,'Scrummaster')">Scrum master</a>
-            </div>
-        </nav>
-        <main> 
             <section>
+                <header>
+                    <h1>Who is in the room?</h1>
+                    <h2>Main Building - Room 2.10k</h2>
+                 </header>
+                 <input id="ts" class="cf" type="checkbox" value="Testers"/>
+                 <input id="ds" class="cf" type="checkbox" value="Designers"/>
+                 <input id="dv" class="cf" type="checkbox" value="Developers"/>
+                 <input id="sc" class="cf" type="checkbox" value="Scrummasters"/>
                  <ul class="t-1">
-                    <li><a class="user" data-f="Designer" href="#"><b>Jocob Ledger</b><img data-src="data/man-1.svg"/><span>Senior lead designer</span></a></li>
-                    <li><a class="user" data-f="Developer" href="#"><b>Paul Vanderbilt</b><img data-src="data/boy-2.svg"/><span>Lead Developer</span></a></li>
-                    <li><a class="user" data-f="Developer" href="#"><b>Jessica Aaron</b><img data-src="data/girl.svg"/><span>Back-end Developer</span></a></li>
-                    <li><a class="user" data-f="Tester" href="#"><b>Anna Johnson</b><img data-src="data/girl-1.svg"/><span>Tester</span></a></li>
+                    <li><a class="user" data-f="Designer" href="#" onclick="sf(this)" title="Jacob Ledger"><b>Jacob Ledger</b><i><img data-src="data/man-1.svg"/></i><span>Senior lead designer</span></a></li>
+                    <li><a class="user" data-f="Developer" href="#" onclick="sf(this)" title="Paul Vanderbilt"><b>Paul Vanderbilt</b><i><img data-src="data/boy-2.svg"/></i><span>Lead Developer</span></a></li>
+                    <li><a class="user" data-f="Developer" href="#" onclick="sf(this)" title="Jessica Aaron"><b>Jessica Aaron</b><i><img data-src="data/girl.svg"/></i><span>Back-end Developer</span></a></li>
+                    <li><a class="user" data-f="Tester" href="#" onclick="sf(this)" title="Anna Johnson"><b>Anna Johnson</b><i><img data-src="data/girl-1.svg"/></i><span>Tester</span></a></li>
                  </ul>
 
                  <ul class="t-2">
-                    <li><a class="user" data-f="Designer" href="#"><b>Tom Baker</b><img data-src="data/boy-3.svg"/><span>Designer</span></a></li>
-                    <li><a class="user" data-f="Developer" href="#"><b>Rob Kostermans</b><img data-src="data/boy-4.svg"/><span>Front-end developer</span></a></li>
-                    <li><a class="user" data-f="Scrummaster" href="#"><b>Joyce Francis</b><img data-src="data/girl-2.svg"/><span>Scrummaster</span></a></li>
-                    <li><a class="user" data-f="Designer" href="#"><b>Francine Smith</b><img data-src="data/girl-3.svg"/><span>Offline media designer</span></a></li>
+                    <li><a class="user" data-f="Designer" href="#" onclick="sf(this)" title="Tom Baker"><b>Tom Baker</b><i><img data-src="data/boy-3.svg"/></i><span>Designer</span></a></li>
+                    <li><a class="user" data-f="Developer" href="#" onclick="sf(this)" title="Rob Kostermans"><b>Rob Kostermans</b><i><img data-src="data/boy-4.svg"/></i><span>Front-end developer</span></a></li>
+                    <li><a class="user" data-f="Scrummaster" href="#" onclick="sf(this)" title="Joyce Francis"><b>Joyce Francis</b><i><img data-src="data/girl-2.svg"/></i><span>Scrummaster</span></a></li>
+                    <li><a class="user" data-f="Designer" href="#" onclick="sf(this)" title="Francine Smith"><b>Francine Smith</b><i><img data-src="data/girl-3.svg"/></i><span>Offline media designer</span></a></li>
                  </ul>
                  <div class="prop door"></div>
                  <div class="prop window e1"></div>
                  <div class="prop window e2"></div>
                  <div class="prop plant p1"></div>
                  <div class="prop plant p2"></div>
-                
             </section> 
         </main>
         

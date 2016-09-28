@@ -1,35 +1,60 @@
-﻿button{
-    background-color:transparent;
-    border:2px solid #fff;
-    color:#fff !important;
-    cursor:pointer;
-    padding:0.7em;
-    margin-top:1em;
-    &.a{
-        background-color:#fff;
-        color:#333 !important;
-    }
-}
-
-nav {
-    position:fixed;
-    z-index:900;
-    padding: 1em;
-    
-    h1, h2, h3 {
-        margin: 0;
-        line-height: 1.5em;
-    }
-
-    h1 {
-        font-weight: lighter;
-        font-size: 2em;
-    }
-
-    h3 {
-        margin-top: 1.5em;
-    }
-    a{
+﻿input[type=checkbox]{
+    font-size:1em;
+    width:0;
+    height:0;
+    &:after{
+        cursor:hand;
+        content:attr(value);
+        border:2px solid #fff;
         display:block;
+        width:5em;
+        text-align:center;
+        padding:0.5em;
+    }
+    &:checked:after{
+        background:#fff;
+        color:$primary-color !important;
+    }
+    &#vw{
+        margin-left:6em;
+    }
+    &.cf{
+        position:absolute;
+        left:102%;
+        
+        &:after{
+            border-width:0 0 2px 0;
+            text-align:left;
+            display:inline-block;
+            width:auto;
+            padding-left:0;
+           #fp:checked ~ section &{
+                border-width:0 0 2px 0 !important;
+            }
+        }
+        &:nth-child(5){bottom:(1 * 2.5em);&:checked:after{border-bottom-color:$pallette-4 !important;}}
+        &:nth-child(4){bottom:(2 * 2.5em);&:checked:after{border-bottom-color:$pallette-3 !important;}}
+        &:nth-child(3){bottom:(3 * 2.5em);&:checked:after{border-bottom-color:$pallette-2 !important;}}
+        &:nth-child(2){bottom:(5 * 2.5em);&:checked:after{border-bottom-color:$pallette-1 !important;}
+
+            &:before{
+                content:"Who are ... ?";
+                white-space:nowrap;
+                font-size:1.15em;
+                font-weight:bold;
+                padding-bottom:0.9em;
+                display:block;
+                #fp:checked ~ section &{
+                    content:"Where are ...?";
+                    border:0 !important;;
+                }
+            }
+        }
+        
     }
 }
+
+#ts:checked ~ ul a[data-f="Tester"]{border-bottom-color:$pallette-1 !important; i{transform: translateY(5%)}}
+#ds:checked ~ ul a[data-f="Designer"]{border-bottom-color:$pallette-2 !important; i{transform: translateY(5%)}}
+#dv:checked ~ ul a[data-f="Developer"]{border-bottom-color:$pallette-3 !important; i{transform: translateY(5%)}}
+#sc:checked ~ ul a[data-f="Scrummaster"]{border-bottom-color:$pallette-4 !important; i{transform: translateY(5%)}}

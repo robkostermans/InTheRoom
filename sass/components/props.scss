@@ -2,8 +2,8 @@
     opacity:0;
     z-index:300;
 }
-.floorplan{
-    section *, section :after, section :before{
+#fp:checked ~ section{
+    *, :after, :before{
         border:solid #fff;
     }
     .prop{
@@ -100,6 +100,7 @@
         right:3%;
         top:15%;
         border:0;
+        z-index:500;
         &.t-2{
              top:65%;
          }

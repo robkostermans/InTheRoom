@@ -4,46 +4,63 @@
     padding:10px 50px;
     text-decoration:none;
     position:relative;
-    img {
+    i{ 
+        position:absolute;
+        display:block;
         left:0;
         top: 0;
-        position:absolute;
-        height:80%;  
+        img {
+            width:50px;
+        }
     }
     span{
         display:block;
         font-size:0.85em;
     }
-    .floorplan & {
-        position: absolute;
-        border-radius: 50% 50% 0 0;
-        $size: 50%;
-        width: $size;
-        padding:0 0 ($size / 1.2) 0;
-        height: 0;
-        right: 15%;
-        margin:-60% 0 0 0;
-        overflow: hidden;
-        z-index: 400;
-        text-decoration: none;
-        
-        b,span {
-            display: none;
-        }
-        img {
-            border:0;
-            height:100%;
-            width: 100%;
-            transform: translateY((100%));
+    
+    &.z {
+        i {
+            transform: translateY(5%) !important;
         }
     }
-
-   
-    &.a {
-        img {
-            transform: translateY(5%);
-        }
-    }
-
-   
 }
+
+a{
+
+    border-bottom:2px solid #fff;
+    &.a{
+        &[data-f="Tester"]{border-bottom-color:$pallette-1 !important;}
+        &[data-f="Designer"]{border-bottom-color:$pallette-2 !important;}
+        &[data-f="Developer"]{border-bottom-color:$pallette-3 !important;}
+        &[data-f="Scrummaster"]{border-bottom-color:$pallette-4 !important;}
+    }
+}
+
+//
+//  Floorplan mode
+//
+ #fp:checked ~ section .user{
+    position: absolute;
+    border-radius: 50% 50% 0 0;
+    $size: 50%;
+    width: $size;
+    padding:0 0 ($size / 1.2) 0;
+    height: 0;
+    right: 15%;
+    margin:-60% 0 0 0;
+    overflow: hidden;
+    z-index: 400;
+    text-decoration: none;
+    b,span {display: none;}
+    i{
+        border:0 !important;
+        height:100%;
+        width: 100%;
+        transform: translateY((100%));
+        img {
+            border:0 !important;
+            width:100%;
+        }
+    }
+}
+
