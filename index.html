@@ -1,43 +1,48 @@
-<html>
-<head>
-    <title>itrq</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/itr.css">
-</head>
-    <body class="list">
-        <main>
-            <input id="fp" type="checkbox" value="Floorplan"/>
-            
-            <section>
-                <header>
-                    <h1>Who is in the room?</h1>
-                    <h2>Main Building - Room 2.10k</h2>
-                 </header>
-                 <input id="ts" class="cf" type="checkbox" value="Testers"/>
-                 <input id="ds" class="cf" type="checkbox" value="Designers"/>
-                 <input id="dv" class="cf" type="checkbox" value="Developers"/>
-                 <input id="sc" class="cf" type="checkbox" value="Scrummasters"/>
-                 <ul class="t-1">
-                    <li><a class="user" data-f="Designer" href="#" onclick="sf(this)" title="Jacob Ledger"><b>Jacob Ledger</b><i><img data-src="data/man-1.svg"/></i><span>Senior lead designer</span></a></li>
-                    <li><a class="user" data-f="Developer" href="#" onclick="sf(this)" title="Paul Vanderbilt"><b>Paul Vanderbilt</b><i><img data-src="data/boy-2.svg"/></i><span>Lead Developer</span></a></li>
-                    <li><a class="user" data-f="Developer" href="#" onclick="sf(this)" title="Jessica Aaron"><b>Jessica Aaron</b><i><img data-src="data/girl.svg"/></i><span>Back-end Developer</span></a></li>
-                    <li><a class="user" data-f="Tester" href="#" onclick="sf(this)" title="Anna Johnson"><b>Anna Johnson</b><i><img data-src="data/girl-1.svg"/></i><span>Tester</span></a></li>
-                 </ul>
-
-                 <ul class="t-2">
-                    <li><a class="user" data-f="Designer" href="#" onclick="sf(this)" title="Tom Baker"><b>Tom Baker</b><i><img data-src="data/boy-3.svg"/></i><span>Designer</span></a></li>
-                    <li><a class="user" data-f="Developer" href="#" onclick="sf(this)" title="Rob Kostermans"><b>Rob Kostermans</b><i><img data-src="data/boy-4.svg"/></i><span>Front-end developer</span></a></li>
-                    <li><a class="user" data-f="Scrummaster" href="#" onclick="sf(this)" title="Joyce Francis"><b>Joyce Francis</b><i><img data-src="data/girl-2.svg"/></i><span>Scrummaster</span></a></li>
-                    <li><a class="user" data-f="Designer" href="#" onclick="sf(this)" title="Francine Smith"><b>Francine Smith</b><i><img data-src="data/girl-3.svg"/></i><span>Offline media designer</span></a></li>
-                 </ul>
-                 <div class="prop door"></div>
-                 <div class="prop window e1"></div>
-                 <div class="prop window e2"></div>
-                 <div class="prop plant p1"></div>
-                 <div class="prop plant p2"></div>
-            </section> 
-        </main>
-        
-        <script src="js/itr.min.js"></script>
-    </body>
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title>Who is in the room?</title>
+    <link href="s.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="list">
+    <main>
+      <input id="fp" type="checkbox" value="Floorplan">
+      <section>
+        <header>
+          <h1>Who is in the room</h1>
+          <h2>Main Building - Room 2.10k</h2>
+        </header>
+        <input id="ts" type="checkbox" value="Testers" class="cf">
+        <input id="ds" type="checkbox" value="Designers" class="cf">
+        <input id="dv" type="checkbox" value="Developers" class="cf">
+        <input id="sc" type="checkbox" value="Scrummasters" class="cf">
+        <ul class="t-1">
+          <li><a data-f="Designer" onclick="sf(this)" title="Jacob Ledger" class="u"><b>Jacob Ledger</b><i><img data-src="data/man-1.svg"></i><span>Designer</span></a>
+          </li>
+          <li><a data-f="Developer" onclick="sf(this)" title="Paul Vanderbilt" class="u"><b>Paul Vanderbilt</b><i><img data-src="data/boy-2.svg"></i><span>Developer</span></a>
+          </li>
+          <li><a data-f="Developer" onclick="sf(this)" title="Jessica Aaron" class="u"><b>Jessica Aaron</b><i><img data-src="data/girl.svg"></i><span>Developer</span></a>
+          </li>
+          <li><a data-f="Tester" onclick="sf(this)" title="Anna Johnson" class="u"><b>Anna Johnson</b><i><img data-src="data/girl-1.svg"></i><span>Tester</span></a>
+          </li>
+        </ul>
+        <ul class="t-2">
+          <li><a data-f="Designer" onclick="sf(this)" title="Tom Baker" class="u"><b>Tom Baker</b><i><img data-src="data/boy-3.svg"></i><span>Designer</span></a>
+          </li>
+          <li><a data-f="Front-end Developer" onclick="sf(this)" title="Rob Kostermans" class="u"><b>Rob Kostermans</b><i><img data-src="data/boy-4.svg"></i><span>Front-end Developer</span></a>
+          </li>
+          <li><a data-f="Scrummaster" onclick="sf(this)" title="Joyce Francis" class="u"><b>Joyce Francis</b><i><img data-src="data/girl-2.svg"></i><span>Scrummaster</span></a>
+          </li>
+          <li><a data-f="Designer" onclick="sf(this)" title="Francine Smith" class="u"><b>Francine Smith</b><i><img data-src="data/girl-3.svg"></i><span>Designer</span></a>
+          </li>
+        </ul>
+        <div class="prop door"></div>
+        <div class="prop window e1"></div>
+        <div class="prop window e1"></div>
+        <div class="prop plant p1"></div>
+        <div class="prop plant p2"></div>
+      </section>
+    </main>
+    <script src="s.js"></script>
+  </body>
 </html>

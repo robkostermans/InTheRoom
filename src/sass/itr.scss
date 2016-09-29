@@ -13,9 +13,8 @@ $pallette-4 : #f0f;
 body {
     font-family: sans-serif;
     font-size: 18px;
-    background-color:#93b1c5;
-    background: radial-gradient(center center, circle cover, #208fe5, #023c8e);
-    background: -webkit-radial-gradient(center center, circle cover, #208fe5, #023c8e);
+    //background:$primary-color;
+    
     margin:0;
 
     *{
@@ -27,6 +26,7 @@ body {
 }
 
 main {
+    background-image:-webkit-radial-gradient(center, #208fe5, #023c8e);
     position: fixed;
     width: 100vw;
     height: 100vh;

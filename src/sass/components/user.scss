@@ -1,4 +1,4 @@
-﻿.user {
+﻿.u {
     display: block;
     margin:10px 0;
     padding:10px 50px;
@@ -39,7 +39,7 @@ a{
 //
 //  Floorplan mode
 //
- #fp:checked ~ section .user{
+ #fp:checked ~ section .u{
     position: absolute;
     border-radius: 50% 50% 0 0;
     $size: 50%;

@@ -1,0 +1,6 @@
+mixin user(name, job, image)
+  a(class="u" data-f="#{job}" onclick="sf(this)" title="#{name}")
+    b #{name}
+    i
+      img(data-src="data/#{image}")
+    span #{job}
