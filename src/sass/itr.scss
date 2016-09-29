@@ -10,59 +10,71 @@ $pallette-2 : #ff0;
 $pallette-3 : #f00;
 $pallette-4 : #f0f;
 
+//
+//
+//
+
 body {
     font-family: sans-serif;
     font-size: 18px;
-    //background:$primary-color;
-    
     margin:0;
+}
 
-    *{
+*{
         box-sizing:border-box !important;
         transition: all 0.5s cubic-bezier(0.2,1,0.3,1);
         color:#fff !important;
-        list-style:none;
     }
-}
 
 main {
-    background-image:-webkit-radial-gradient(center, #208fe5, #023c8e);
+    background-color:$primary-color;
+    background-image: -webkit-radial-gradient(center, #208fe5, #023c8e);
+    background-image:-moz-radial-gradient(center, #208fe5, #023c8e);
+    background-image:radial-gradient(center, #208fe5, #023c8e);
+    
     position: fixed;
     width: 100vw;
     height: 100vh;
-    section {
-        position: relative;
-        border: 2px solid #fff;
-        margin:5.5em auto;
-        max-width: 50vmin;
-        min-height: (50vmin * $scale);
-        padding:4%;
-        ul{padding:0;margin:0;}
-        header{
-            border:0 !important;
-            position:absolute;
-                top:-5.5em;
-                left:-2px;
-            h1,h2{
-                display:inline-block;
-                background:#fff;
-                color:$primary-color !important;
-                font-size:1.5em;
-                line-height:1.5em;
-                padding:0 0.5em;
-                border:0 !important;
-                margin:0;
-                white-space:nowrap;
-                
-            }
-            h2{
-                display:block;
-                    font-size:1.3em;
-                    font-weight:lighter;
-                }
-        }
-       
-    }
+}
+
+section {
+    position: relative;
+    border: 2px solid #fff;
+    margin:5.5em auto;
+    max-width: 50vmin;
+    min-height: (50vmin * $scale);
+    padding:4%;
+}
+
+ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+
+header{
+    border:0 !important;
+    position:absolute;
+    top:-5.5em;
+    left:-2px;
+    
+}
+h1,h2{
+    display:inline-block;
+    background:#fff;
+    color:$primary-color !important;
+    font-size:1.5em;
+    line-height:1.5em;
+    padding:0 0.5em;
+    border:0 !important;
+    margin:0;
+    white-space:nowrap;  
+}
+h2{
+    display:block;
+    font-size:1.3em;
+    font-weight:lighter;
 }
 
 //
@@ -95,5 +107,3 @@ main {
 @import "components/user";
 @import "components/navigation";
 @import "components/mobile";
-
-

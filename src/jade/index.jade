@@ -1,21 +1,22 @@
 doctype html
 include mixins
 
-html  
+html(lang="en/us")  
  head
     title Who is in the room?
     link(href='s.css', rel='stylesheet',type="text/css")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
   body(class="list")
     main
-        input(id="fp" type="checkbox" value="Floorplan")
+        input(id="fp" type="checkbox" value="Toggle floorplan" aria-label="Toggle Floorplan mode")
         section
             header
-                h1 Who is in the room
+                h1 Who is in the room?
                 h2 Main Building - Room 2.10k
-            input(id="ts" class="cf" type="checkbox" value="Testers")
-            input(id="ds" class="cf" type="checkbox" value="Designers")
-            input(id="dv" class="cf" type="checkbox" value="Developers")
-            input(id="sc" class="cf" type="checkbox" value="Scrummasters")
+            input(id="ts" class="cf" type="checkbox" value="Testers" aria-label="Filter Testers")
+            input(id="ds" class="cf" type="checkbox" value="Designers" aria-label="Filter Designers")
+            input(id="dv" class="cf" type="checkbox" value="Developers" aria-label="Filter Developers")
+            input(id="sc" class="cf" type="checkbox" value="Scrummasters" aria-label="Filter Scrumasters")
             ul(class="t-1")
               li
                 +user("Jacob Ledger", "Designer", "man-1.svg")
@@ -36,7 +37,7 @@ html
                 +user("Francine Smith", "Designer", "girl-3.svg")  
             div(class="prop door")
             div(class="prop window e1")
-            div(class="prop window e1")
+            div(class="prop window e2")
             div(class="prop plant p1")
             div(class="prop plant p2")
       script(src='s.js')

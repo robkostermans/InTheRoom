@@ -9,14 +9,25 @@
         max-width:90vmin !important;
         min-height: (90vmin * $scale) !important;
         header{
-            width:100vw;
+            font-size:0.70em;
+            width:70vw;
+            top:-7em;;
             left:-5vmin !important;
+            overflow:hidden;
             h1{display:block !important;}
         }
     }
     
-    
     input[type=checkbox]{
         display:none;
+        &#fp{
+            display:block;
+            top:0.8em;
+            right:3.7em;
+            &:after{
+                content:"#";
+                width:10vw;
+            }
+        }
      }
 }

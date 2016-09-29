@@ -2,5 +2,5 @@ mixin user(name, job, image)
   a(class="u" data-f="#{job}" onclick="sf(this)" title="#{name}")
     b #{name}
     i
-      img(data-src="data/#{image}")
+      img(data-src="data/#{image}" alt="#{name} profile picture")
     span #{job}
