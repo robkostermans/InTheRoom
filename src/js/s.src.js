@@ -7,6 +7,7 @@ function sf(o){
     }
 }
 
+
 (function(){
    var e, a = document.querySelectorAll("img");
     for (e in a) {
