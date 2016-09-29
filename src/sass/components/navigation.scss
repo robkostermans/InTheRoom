@@ -1,62 +1,53 @@
-﻿input[type=checkbox]{
-    font-size:1em;
-    width:0;
-    height:0;
-    &:after{
-        cursor:pointer;
-        content:attr(value);
-        border:2px solid #fff;
-        display:block;
-        width:5em;
-        text-align:center;
-        padding:0.5em;
+﻿label[for="fp"]{
+    cursor:pointer;
+    border:2px solid #fff;
+    display:block;
+    width:5em;
+    text-align:center;
+    padding:0.5em;
+    position:fixed;
+    top:20px;
+    right:1em;
+}
+section label{
+   position:absolute;
+   left:102%;
+   white-space:nowrap;
+   border:2px solid transparent !important;
+   border-width:0 0 2px 0 !important;
+   cursor:hand;
+   &[for="sc"]{bottom:(0.5 * 2em);}
+   &[for="dv"]{bottom:(1.5 * 2em);}
+   &[for="ds"]{bottom:(2.5 * 2em);}
+   &[for="ts"]{bottom:(3.5 * 2em);
+   &:before{
+       content:"Who are...?";
+       display:block;
+       font-size:1.15em;
+        font-weight:bold;
+        padding-bottom:0.9em;
+        border:0 !important;
+   }
+   }
+}
+section input:checked + label{
+    i{transform: translateY(5%);}
+    &[for="ds"]{border-color:$pallette-2 !important;}
+    &[for="dv"]{border-color:$pallette-3 !important;}
+    &[for="sc"]{border-color:$pallette-4 !important;}
+    &[for="ts"]{border-color:$pallette-1 !important;
+     &:before{
+       content:"Who are...?";
+     }
     }
-    &:checked:after{
-        background:#fff;
-        color:$primary-color !important;
-    }
-    &#fp{
-        position:fixed;
-        top:20px;
-        right:7em;
-    }
-    &#vw{
-        margin-left:6em;
-    }
-    &.cf{
-        position:absolute;
-        left:102%;
-        
-        &:after{
-            border-width:0 0 2px 0;
-            text-align:left;
-            display:inline-block;
-            width:auto;
-            padding-left:0;
-           #fp:checked ~ section &{
-                border-width:0 0 2px 0 !important;
-            }
-        }
-        &:nth-child(5){bottom:(1 * 2.5em);&:checked:after{border-bottom-color:$pallette-4 !important;}}
-        &:nth-child(4){bottom:(2 * 2.5em);&:checked:after{border-bottom-color:$pallette-3 !important;}}
-        &:nth-child(3){bottom:(3 * 2.5em);&:checked:after{border-bottom-color:$pallette-2 !important;}}
-        &:nth-child(2){bottom:(5 * 2.5em);&:checked:after{border-bottom-color:$pallette-1 !important;}
+}
 
-            &:before{
-                content:"Who are ... ?";
-                white-space:nowrap;
-                font-size:1.15em;
-                font-weight:bold;
-                padding-bottom:0.9em;
-                display:block;
-                #fp:checked ~ section &{
-                    content:"Where are ...?";
-                    border:0 !important;;
-                }
-            }
-        }
-        
-    }
+
+#fp:checked ~ section [for="ts"]:before{
+    content:"Where are...?";
+}
+input[type=checkbox]{
+    visibility: hidden;
 }
 
 #ts:checked ~ ul a[data-f="Tester"]{border-bottom-color:$pallette-1 !important; i{transform: translateY(5%)}}

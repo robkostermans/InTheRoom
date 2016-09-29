@@ -8,15 +8,21 @@ html(lang="en/us")
     meta(name='viewport', content='width=device-width, initial-scale=1')
   body(class="list")
     main
+        label(for="fp") Toggle floorplan
         input(id="fp" type="checkbox" value="Toggle floorplan" aria-label="Toggle Floorplan mode")
         section
             header
                 h1 Who is in the room?
                 h2 Main Building - Room 2.10k
+            
             input(id="ts" class="cf" type="checkbox" value="Testers" aria-label="Filter Testers")
+            label(for="ts") Filter Testers
             input(id="ds" class="cf" type="checkbox" value="Designers" aria-label="Filter Designers")
+            label(for="ds") Filter Designers
             input(id="dv" class="cf" type="checkbox" value="Developers" aria-label="Filter Developers")
+            label(for="dv") Filter Developers
             input(id="sc" class="cf" type="checkbox" value="Scrummasters" aria-label="Filter Scrumasters")
+            label(for="sc") Filter Scrumasters
             ul(class="t-1")
               li
                 +user("Jacob Ledger", "Designer", "man-1.svg")
