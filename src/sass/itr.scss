@@ -27,23 +27,27 @@ body {
     }
 
 main {
-    background-color:$primary-color;
+   
     background-image: -webkit-radial-gradient(center, #208fe5, #023c8e);
     background-image:-moz-radial-gradient(center, #208fe5, #023c8e);
     background-image:radial-gradient(center, #208fe5, #023c8e);
-    
+     background-color:$primary-color;
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 section {
-    position: relative;
+    position: absolute;
     border: 2px solid #fff;
-    margin:5.5em auto;
-    max-width: 50vmin;
-    min-height: (50vmin * $scale);
     padding:4%;
+    top:50%;
+    left:50%;
+    $width : 64vmin;
+    width: $width;
+    height: $width * $scale;
+    margin: (($width * 1.5) / 2 *-1) 0 0 ($width / 2 *-1);
+
 }
 
 ul{
