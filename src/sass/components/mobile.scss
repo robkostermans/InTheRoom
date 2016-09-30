@@ -2,20 +2,19 @@
 //  SIMPLE mobile strategy
 //  
 @media screen and (max-width : 768px){
-    main{
-          //overflow:auto !important;
-    }
     section{
         $width : 64vmin;
         width: $width !important;
         height: $width * $scale !important;
         margin: (($width * 1.5) / 2 *-1) 0 0 ($width / 2 *-1) !important;
-        overflow:auto !important;
+        overflow:auto;
         label{
             display:none;
         }
     }
-    
+    #fp:checked ~ section{
+        overflow:hidden;
+    }
      header{
         position:fixed;
         font-size:0.70em;

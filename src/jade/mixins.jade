@@ -1,6 +1,6 @@
-mixin user(name, job, image)
+mixin user(name, job, image, initials)
   a(class="u" data-f="#{job}" onclick="sf(this)" title="#{name}")
     b #{name}
     i
-      img(data-src="data/#{image}" alt="#{name} profile picture")
+      img(data-src="data/#{image}" alt="#{initials}")
     span #{job}

@@ -13,6 +13,7 @@ function sf(o){
     for (e in a) {
        if (e == parseInt(e,10)) {
            a[e].setAttribute('src', a[e].getAttribute('data-src'));
+           a[e].removeAttribute('data-src')
         }
     }
 })();
