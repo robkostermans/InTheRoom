@@ -2,7 +2,7 @@
 My submission for 2016 10k Apart contest
 
 ## 10k
-As it stand the index.html, s.js and s.css combine to 9.17kb.
+As it stand the index.html, s.js and s.css combine to 9.14kb.
 Only the user images are lazy loaded.
 
 ## GZIP
