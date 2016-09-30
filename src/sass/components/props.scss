@@ -2,6 +2,9 @@
     opacity:0;
     z-index:300;
 }
+.t-1{
+    margin-top:45px;
+}
 #fp:checked ~ section{
     *, :after, :before{
         border:solid #fff;
@@ -101,6 +104,7 @@
         top:15%;
         border:0;
         z-index:500;
+        margin:0;
         &.t-2{
              top:65%;
          }
